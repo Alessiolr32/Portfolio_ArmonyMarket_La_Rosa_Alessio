@@ -5,7 +5,7 @@
         @if ($filterByCategory ?? false)
         <h1 class="h2 fw-bold mb-0 mt-0">
             {{__('ui.search_for')}}
-            <span class="text-primary fw-bold h2">{{__("ui." . $category->name)}}</span>
+            <span class="fw-bold h2">{{__("ui." . $category->name)}}</span>
         </h1>
         <p class="text-black mb-0">{{__('ui.products_for_category')}}</p>        
         @else

@@ -4,7 +4,7 @@
     <header class="text-center header-section my-5 rounded-5 shadow w-75 mx-auto">
         <h1 class="h3 fw-bold mt-1">
            {{__('ui.items_found_for')}}
-            <span class="text-primary h2 fw-bold">{{$query}}</span>
+            <span class="h2 fw-bold">{{$query}}</span>
         </h1>
     </header>  
     
