@@ -42,14 +42,14 @@
                             <img src="{{ $article->images[0]->getUrl(300, 300) }}" 
                             alt="{{ $article->title }}" 
                             class="img-fluid rounded-3 shadow ms-1" 
-                            style="max-height: 100px;">
+                            style="max-height: 100px; max-width: 100px;">
                         </td>
                         @else
                         <td class="card-log-bg">
                             <img src="{{ asset('images/placeholder/placeholder1.jpg') }}" 
                             alt="placeholder" 
                             class="img-fluid rounded" 
-                            style="max-height: 100px;">
+                            style="max-height: 100px; max-width: 100px;">
                         </td>
                         @endif
                         
@@ -64,15 +64,15 @@
                             @php 
                             $image = $article->images[0]; 
                             $icons = [
-                            'adult' => 'fa-person-circle-exclamation',
-                            'violence' => 'fa-skull-crossbones',
-                            'spoof' => 'fa-mask',
-                            'racy' => 'fa-heart-crack',
-                            'medical' => 'fa-hospital'
+                            'adult' => '',
+                            'violence' => '',
+                            'spoof' => '',
+                            'racy' => '',
+                            'medical' => ''
                             ]; 
                             @endphp
                             
-                            <div class="labels-container">
+                            <div class="labels-container my-1">
                                 @if($image->labels && count($image->labels) > 0)
                                 @foreach($image->labels as $label)
                                 <span class="badge bg-secondary me-1 mb-1">#{{ $label }}</span>

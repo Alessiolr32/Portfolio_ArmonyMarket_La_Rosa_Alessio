@@ -20,7 +20,7 @@ class CreateArticleForm extends Component
     public $images = [];
     public $temporary_images;
 
-    #[Validate('required|min:1|max:30')]
+    #[Validate('required|min:1|max:50')]
     public $title;
 
     #[Validate('required|min:3')]
@@ -29,7 +29,9 @@ class CreateArticleForm extends Component
     #[Validate('required|numeric')]
     public $price;
 
+    #[Validate('required')]
     public $category;
+    
     public $article;
 
     public function save()

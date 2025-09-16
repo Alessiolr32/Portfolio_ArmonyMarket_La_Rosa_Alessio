@@ -18,7 +18,7 @@
                 
                 <section class="col-md-6 ps-4 pe-1">
                     <div class="mt-1">
-                        <h1 class="text-center display-3 fw-semibold mb-3 text-break">{{ $article->title }}</h1>
+                        <h1 class="text-center display-3 fw-semibold mb-4 text-break">{{ $article->title }}</h1>
                         
                         <div class="d-flex">
                             <span class="me-1 fw-bold">
@@ -59,8 +59,43 @@
             </div>
             
             <section>
+                <div>
+                    @if(count($article->images) > 0)
+                    @php 
+                    $image = $article->images[0]; 
+                    $icons = [
+                    'adult' => '',
+                    'violence' => '',
+                    'spoof' => '',
+                    'racy' => '',
+                    'medical' => ''
+                    ]; 
+                    @endphp
+                    
+                    <div class="labels-container text-center mt-2">
+                        @if($image->labels && count($image->labels) > 0)
+                        @foreach($image->labels as $label)
+                        <span class="badge bg-secondary me-1 mb-1">#{{ $label }}</span>
+                        @endforeach
+                        @else
+                        <p class="fst-italic mb-2">{{__('ui.no_labels')}}</p>
+                        @endif
+                        
+                        <ul class="list-unstyled mb-0 mt-3 d-flex flex-wrap justify-content-center">
+                            @foreach($icons as $key => $icon)
+                            <li>
+                                <i class="{{ $image->$key }} me-1 ms-4"></i> {{ ucfirst($key) }}
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @else
+                    <span class="text-muted">N/A</span>
+                    @endif
+                </div>
+
                 @if($article->is_accepted === null)
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center mt-3">
                     <p class="fw-bold mb-2">{{__('ui.article_public')}}?</p>
                 </div>
                 <div class="d-flex justify-content-center mb-1">
