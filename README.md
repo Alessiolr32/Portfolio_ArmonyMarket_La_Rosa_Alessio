@@ -64,7 +64,9 @@ Il progetto è stato sviluppato con **Laravel (backend)** e **Vite + JavaScript 
 - PHP >= 8.1  
 - Composer  
 - Node.js + npm  
-- MySQL o MariaDB  
+- MySQL o MariaDB
+- Google Vision Credential
+*Per sfruttare a pieno le funzionalità del sito*
 
 ### Setup  
 
