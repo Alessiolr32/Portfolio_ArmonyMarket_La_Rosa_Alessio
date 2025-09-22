@@ -74,7 +74,7 @@ Il progetto è stato sviluppato con **Laravel (backend)** e **Vite + JavaScript 
 git clone <repo-url>
 
 # Entrare nella cartella del progetto
-cd presto_la-rosa_carannante_neve
+cd <repo name>
 
 # Installare dipendenze PHP
 composer install
