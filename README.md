@@ -89,7 +89,7 @@ php artisan key:generate
 
 # Configurare database nel file .env e poi
 php artisan migrate --seed
-```
+
 
 ### Avvio in locale  
 
@@ -99,9 +99,10 @@ php artisan serve
 
 # Avvio build frontend
 npm run dev
-```
 
----
+# Avvio dei job in background (es. analisi immagini)
+php artisan queue:work
+
 
 ## ✅ Testing  
 
